@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by Jackson Firth ticket 5928 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/hide_completed"
+            android:title="@string/hide_completed_todos"
+            android:textColor="?textColor"
+            app:actionLayout="@layout/switch_item"
+        />
+
+        <item
+            android:id="@+id/boards_home"
+            android:title="@string/action_home"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/settings"
+            android:title="@string/action_settings"
+            android:textColor="?textColor"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/aboutMeMenuItem"
+            android:title="@string/about"
+            android:textColor="?textColor"
+            app:showAsAction="never" />
+    </group>
+</menu>

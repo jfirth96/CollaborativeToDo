@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Not so Minimal</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_home">Home</string>
+    <string name="no_to_dos">You don\'t have any todos</string>
+    <string name="no_boards">You don\'t have any Boards</string>
+    <string name="title">Title</string>
+
+    <string name="remind_me">Set a Reminder</string>
+
+    <string name="about">About</string>
+
+    <string name="app_version">Version: %1$s</string>
+
+    <string name="made_by">Made by: Tamara, Jackson, David, Sopulu, and Max</string>
+
+    <string name="done_label">Done</string>
+
+    <string name="date_reminder_default">Today</string>
+
+    <string name="night_mode">Night Mode</string>
+
+    <string name="night_mode_on_summary">Night mode is on</string>
+
+    <string name="night_mode_off_summary">Night mode is off</string>
+
+    <string name="description" translatable="false">Description</string>
+
+    <string name="snooze">Snooze</string>
+
+    <string name="remove">Remove</string>
+
+    <string name="todo_error" translatable="false">ToDo must have a title</string>
+
+    <string name="nav_header_desc" translatable="false">Navigation Header</string>
+
+    <string name="nav_header_title" translatable="false">Not so Minimal ToDo</string>
+
+    <string name="nav_header_subtitle" translatable="false">CIS3760 W19 Section 2 - Group 3</string>
+
+    <string name="hide_completed_todos" translatable="false">Hide Completed ToDos</string>
+
+    <string name="set_due_date" translatable="false">Set a Due Date</string>
+
+    <string name="time_separator" translatable="false">\@</string>
+    <string name="priority" translatable="false">Priority</string>
+    <string name="date_icon" translatable="false">Date Icon</string>
+    <string name="exclamation_mark" translatable="false">Exclamation Mark</string>
+    <string name="alarm_symbol" translatable="false">Alarm Symbol</string>
+
+    <string-array name="snooze_options">
+        <item>10 Minutes</item>
+        <item>30 Minutes</item>
+        <item>1 Hour</item>
+    </string-array>
+
+    <!-- Added by Sopulu -->
+    <string-array name="priority_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+</resources>

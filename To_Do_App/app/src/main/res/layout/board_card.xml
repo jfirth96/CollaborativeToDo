@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="5dp">
+
+    <View
+        android:id="@+id/color_view"
+        android:layout_width="8dp"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp">
+
+    <TextView
+            android:layout_alignParentTop="true"
+            android:id="@+id/boardListItemTextview"
+            android:lines="1"
+            android:textColor="@color/secondary_text"
+            android:textSize="23sp"
+            android:text="Weekend Chores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/boardListItemTextview"
+        android:id="@+id/boardListItemTimeTextView"
+        android:text="27 Sept 2015, 22:30"
+        android:textColor="?attr/colorAccent"
+        android:textSize="12sp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_weight="5"-->
+    <!--android:gravity="center"-->

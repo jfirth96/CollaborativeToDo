@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c0\c0\c93333;}
+\margl1440\margr1440\vieww10500\viewh8100\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0  -> This is not a runnable script. This is for reference only. \
+\
+create table users(\
+userID int not null auto_increment primary key,\
+userName varchar(40) not null, \
+userKey varchar(256) not null, \
+email varchar(100)\
+);\
+\
+create table boards(\
+boardID int not null auto_increment primary key,\
+boardName varchar(40) not null,\
+owner varchar(40) not null, \
+userID int not null,\
+foreign key (userID) references users(userID) on delete cascade\
+);
+\f1\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 create table memberOf(ID int not null auto_increment primary key, \
+boardID int not null, \
+userID int not null, \
+boardColor int,\
+dateCreated bigint,\
+foreign key (boardID) references boards(boardID) on delete cascade,\
+foreign key (userID) references users(userID) on delete cascade\
+);\
+\
+\
+create table tasks(taskID int not null auto_increment primary key,\
+boardID int not null,\
+creator varchar(40) not null, \
+title varchar(100) not null, \
+description varchar(2000),\
+dueDate varchar(40),\
+hasDueDate varchar(40),\
+reminder varchar(40),\
+hasReminder varchar(40),\
+priority varchar(40),\
+completed int default 0,\
+foreign key (boardID) references boards(boardID) on delete cascade\
+);\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\
+//MySQL, use database named userData\
+\
+}

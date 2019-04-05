@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/listItemLinearLayout"
+    android:layout_marginBottom="1dp"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:background="?todoHolderBg"
+>
+
+    <!--Added by Tamara Charchoghlyan-->
+    <CheckBox
+        android:id="@+id/checkDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="8dp" />
+
+    <RelativeLayout
+        android:layout_marginLeft="16dp"
+        android:layout_weight="5"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="?android:attr/listPreferredItemHeight">
+
+        <TextView
+            android:layout_alignParentTop="true"
+            tools:ignore="MissingPrefix"
+            android:id="@+id/toDoListItemTextview"
+            android:lines="1"
+            android:gravity="start|bottom"
+            android:textColor="?textColor"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:text="Clean your room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@id/toDoListItemTextview"
+            android:id="@+id/todoListItemTimeTextView"
+            android:text="27 Sept 2015, 22:30"
+            android:textColor="?attr/colorAccent"
+            android:textSize="12sp"
+            android:gravity="start|center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/priorityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority"
+        android:layout_gravity="end|center"
+        android:gravity="end|center"
+        android:textColor="?textColor"
+        />
+
+    <ImageView
+        android:id="@+id/priorityImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_priority_high_white_24dp"
+        android:layout_gravity="end|center"
+        android:gravity="end|center"/>
+</LinearLayout>

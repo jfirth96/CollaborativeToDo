@@ -1,0 +1,299 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_toolbar"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/editTextParentLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".4"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+            >
+
+                <com.example.avjindersinghsekhon.minimaltodo.Utility.CustomTextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:hintTextAppearance="@style/FloatingLabelTextAppearance">
+
+                    <EditText
+                        android:id="@+id/userToDoEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="32dp"
+                        android:gravity="start|bottom"
+                        android:hint="@string/title"
+                        android:inputType="textAutoCorrect|textCapSentences"
+                        android:minLines="1"
+                        android:maxLength="30"
+                        android:maxLines="3"
+                        android:textColor="@color/icons"
+                        android:textSize="20sp"
+                        android:autofillHints="" />
+                </com.example.avjindersinghsekhon.minimaltodo.Utility.CustomTextInputLayout>
+            </LinearLayout>
+
+            <com.example.avjindersinghsekhon.minimaltodo.Utility.CustomTextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:background="?backgroundColor"
+            >
+
+                <EditText
+                    android:id="@+id/userToDoDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:gravity="start|bottom"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="2"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:textColor="?textColor"
+                    android:autofillHints="" />
+            </com.example.avjindersinghsekhon.minimaltodo.Utility.CustomTextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/todoReminderAndDateContainerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:background="?backgroundColor"
+            >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginTop="30dp"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center"
+                    tools:layout_height="40dp"
+                >
+
+                    <ImageButton
+                        android:id="@+id/addToDoPriorityImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/exclamation_mark"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_priority_low_24dp" />
+
+                    <TextView
+                        android:id="@+id/priorityTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="120dp"
+                        android:text="@string/priority"
+                        android:textColor="?textColor"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/priority_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="?textColor"
+                    />
+                </LinearLayout>
+
+                <!-- Added by Jackson Firth - 5569 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center"
+                >
+                    <ImageButton
+                        android:id="@+id/dueDateIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/date_icon"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_date_range_white_24dp"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="120dp"
+                        android:text="@string/set_due_date"
+                        android:textColor="?textColor"
+                        android:textSize="16sp"
+                    />
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/toDoHasDueDateSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                    />
+                </LinearLayout>
+
+                <!-- Added by Jackson Firth - 5569 -->
+                <LinearLayout
+                    android:id="@+id/toDoEnterDueDateLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:animateLayoutChanges="true"
+                    android:gravity="top"
+                >
+                    <EditText
+                        android:id="@+id/newTodoDueDateEditText"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:textIsSelectable="false"
+                        android:textColor="?textColor"
+                        android:autofillHints="" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/time_separator"
+                        android:textColor="?attr/colorAccent" />
+                    <EditText
+                        android:id="@+id/newTodoDueTimeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="time"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:textIsSelectable="false"
+                        android:textColor="?textColor"
+                        android:autofillHints="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:gravity="center"
+                >
+                    <ImageButton
+                        android:id="@+id/userToDoReminderIconImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_add_alarm_grey_200_24dp"
+                        android:contentDescription="@string/alarm_symbol"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="120dp"
+                        android:text="@string/remind_me"
+                        android:textColor="?textColor"
+                        android:textSize="16sp"
+                    />
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/toDoHasDateSwitchCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/toDoEnterDateLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_gravity="center"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center"
+                >
+                    <EditText
+                        android:id="@+id/newTodoDateEditText"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:textIsSelectable="false"
+                        android:textColor="?textColor"
+                        android:autofillHints="" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/time_separator"
+                        android:textColor="?attr/colorAccent"
+                    />
+
+                    <EditText
+                        android:id="@+id/newTodoTimeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="time"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:textColor="?textColor"
+                        android:autofillHints="" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/makeToDoFloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_send_white_18dp"
+            app:fabSize="normal"
+            app:layout_anchor="@id/editTextParentLinearLayout"
+            app:layout_anchorGravity="bottom|right" />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
